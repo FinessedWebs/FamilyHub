@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+    <title>Msipha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style type="text/css">
+        body{
+            scroll-behavior:smooth;
+        }
+ nav{
+            margin: 27px auto 0;
+            position: relative;
+            width: 590px;
+            height: 50px;
+            background-color: #34495e;
+            border-radius: 8px;
+            font-size:0 ;
+        }
+        nav a{
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        
+        div.animation{
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+            border-radius: 8px;
+        }
+        a:nth-child(1){
+            width: 100px
+        }
+        a:nth-child(2){
+            width: 110px; 
+        }
+        a:nth-child(3){
+            width:100px
+        }
+        a:nth-child(4){
+            width:160px;
+        }
+        a:nth-child(5){
+            width:120px
+        }
+        nav.start-home, a:nth-child(1):hover~.animation{
+            width: 100px;
+            left: 0;
+            background-color: #42788a;
+        }
+        nav.start-about, a:nth-child(2):hover~.animation{
+            width: 110px;
+            left:100px;
+            background-color: #42788a;
+        }
+         nav.start-blog, a:nth-child(3):hover~.animation{
+            width: 100px;
+            left:210px;
+            background-color: #42788a;
+        }
+         nav.start-portefolio, a:nth-child(4):hover~.animation{
+            width: 160px;
+            left:310px;
+            background-color: #42788a;
+        }
+         nav.start-contact, a:nth-child(5):hover~.animation{
+            width: 120px;
+            left:470px;
+            background-color: #42788a;
+        }
+        .container{
+            
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+            
+        }
+        .left-div {
+            
+            flex: 70%;
+            padding: 50px;
+            text-align: center;
+            background-color: #f0f0f0;
+            font-size: 22px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+        }
+        .right-div {
+            flex: 30%;  
+            background-color: #ccc;
+        }
+        .right-div img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .line-short{
+            width: 350px;
+        }
+       
+        .hub {
+            padding-left: 100px;
+            padding-right: 100px;
+            background-color: #f0f0f0; /* Light gray background color */
+            border-radius: 8px;
+            font-family: 'Arial', sans-serif; /* Set font-family */
+            line-height: 1.6; /* Improved line-height for better readability */
+            font-size: 20px; /* Adjust font size as needed */
+            overflow: hidden; /* Clear floats */
+        }
+.hub h1 {
+    text-align: center; /* Center align the heading */
+    font-size: 28px; /* Increase heading font size */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+.hub p {
+    margin-bottom: 15px; /* Add space between paragraphs */
+    text-align: justify; /* Justify the text */
+    position: relative; /* Position images within this container */
+        
+}
+ /* Styling for the images within paragraphs */
+
+ .img1 {
+           
+           float: right; /* Float images to the right */
+           max-width: 180px; /* Set maximum width for the images */
+           height: auto; /* Maintain aspect ratio */
+           border-radius: 8px; /* Add border-radius for rounded corners */
+           margin: 0 0 15px 15px; /* Margin for wrapping effect */
+       }
+ 
+        .img2 {
+           
+            float: left; /* Float images to the right */
+            max-width: 180px; /* Set maximum width for the images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Add border-radius for rounded corners */
+            margin: 15px 15px  0 0; /* Margin for wrapping effect */
+        }
+        .img3 {
+           
+           float: right; /* Float images to the right */
+           max-width: 180px; /* Set maximum width for the images */
+           height: auto; /* Maintain aspect ratio */
+           border-radius: 8px; /* Add border-radius for rounded corners */
+           margin: 0 0 15px 15px; /* Margin for wrapping effect */
+       }
+       .buttons {
+            text-align: center; /* Center-align the buttons */
+        }
+        .buttons a {
+            display: block; /* Display buttons as blocks */
+            width: 200px; /* Set button width */
+            padding: 10px; /* Add padding */
+            margin: 10px auto; /* Center the buttons vertically */
+            text-align: center; /* Center-align button text */
+            background-color: #34495e; /* Button background color */
+            color: white; /* Button text color */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Add border-radius for rounded corners */
+        }
+ /* Additional styles for button hover and active state */
+ .buttons a:hover {
+            background-color: #42788a; /* Change background color on hover */
+            transition: all .4s ease 0s;
+        }
+        .buttons a:active {
+            transform: translateY(2px); /* Add slight vertical movement on click */
+        }
+
+        .menu-toggle {
+            display: none; /* Hide by default */
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+            /* Adjustments for smaller devices */
+            
+.message{
+    font-size: 20px;
+}
+            nav{
+                height: 50px;
+                width: 100%;
+               
+            }
+            nav a{
+                line-height: 50px;
+                font-size: 11px;
+                
+            }
+            a:nth-child(1){
+            width: 57px
+        }
+        a:nth-child(2){
+            width: 59px; 
+        }
+        a:nth-child(3){
+            width:50px
+        }
+        a:nth-child(4){
+            width:110px;
+        }
+        a:nth-child(5){
+            width:50px
+        }
+        nav.start-home, a:nth-child(1):hover~.animation{
+            width: 57px;
+            left: 0;
+            background-color: #42788a;
+        }
+        nav.start-about, a:nth-child(2):hover~.animation{
+            width: 52px;
+            left:60px;
+            background-color: #42788a;
+        }
+         nav.start-blog, a:nth-child(3):hover~.animation{
+            width: 80px;
+            left:109px;
+            background-color: #42788a;
+        }
+         nav.start-portefolio, a:nth-child(4):hover~.animation{
+            width: 85px;
+            left:180px;
+            background-color: #42788a;
+        }
+         nav.start-contact, a:nth-child(5):hover~.animation{
+            width: 85px;
+            left:255px;
+            background-color: #42788a;
+        }
+            .hub{
+                font-size: 15px;
+                padding: 10px;
+            }
+            .container {
+                flex-direction: column; /* Stack items vertically */
+            }
+            .left-div,
+            .right-div {
+                flex: 100%; /* Full width for individual sections */
+            }
+            .img1,
+            .img2,
+            .img3 {
+                float: none; /* Remove floating for images */
+                max-width: 100%; /* Adjust image width */
+                margin: 0 auto 15px; /* Center-align images */
+                display: block; /* Display images as blocks */
+            }
+           /* .menu-icon {
+                display: block; /* Show the hamburger menu icon */
+                /*position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 2;
+                color: black;
+                font-size: 24px;
+            }*/
+           /* nav {
+                display: none; /* Hide the navigation */
+                /*width: 100%;
+                text-align: center;
+                background-color: #34495e;
+                position: absolute;
+                top: 60px;
+                z-index: 1;
+            }
+            nav a {
+                display: block;
+                padding: 15px 0;
+                border-bottom: 1px solid #2c3e50;
+            }
+            nav a:last-child {
+                border-bottom: none;
+            }
+            nav.show {
+                display: block; /* Show the navigation when toggled */
+           /* }
+
+        }*/
+        .space{
+            height: 50px;
+        }
+        footer{
+        
+        padding: 0.5em 0;
+        height: 130px;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+    }
+}
+    </style>
+    </head>
+    <body>
+        
+            <header>
+                <div>
+
+ <!-- Hamburger menu icon -->
+ <div class="menu-icon" onclick="toggleMenu()">
+    &#9776; <!-- Hamburger icon -->
+</div>
+
+                    <nav id="nav"><a href="index.html">Log Out</a>
+                    <a href="#content">About</a>
+                    <a href="calender.html">Calendar</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="#contact">Contact</a>
+                    <div class="animation start-home"></div>
+                    </nav>
+                </div>
+            </header>
+            <div class="space"></div>
+           <div class="container">
+            <div class="left-div">
+                <!-- Centered four-sentence message -->
+                <p class="message">"Children’s children are
+                     a crown to the aged, and parents are the pride 
+                     of their children."<br>Proverbs 17:6 (NIV) <br>
+                    <br>"I know that there is nothing better for people than to be happy and to do good while they live. That each of them may eat and drink and find satisfaction in all their toil—this is the gift of God."<br>Ecclesiastes 3:12-13 (NIV)<br> <hr class="line-short"></p>
+            </div>
+            <div class="right-div">
+                <!-- Replace 'image-source.jpg' with your image path -->
+                <img src="FAM.jpg" alt="Image" height="">
+            </div>
+
+           </div>
+           <div class="space"></div>
+           <div class="hub" id="content">
+            <h1>Welcome to Our Family Event Hub</h1>
+            <p >We're thrilled to introduce our new online platform designed to keep everyone in the loop about our 
+                upcoming family events and gatherings. This website serves as a central hub for all the essential details 
+                and information you might need regarding our family reunions, celebrations, and special occasions.<img class="img1" src="FAM back.jpg" alt="Image 1"> Within this 
+                    virtual space, you'll discover a comprehensive calendar showcasing dates, times, and locations of our upcoming 
+                    gatherings. Whether it's a milestone anniversary, a joyous holiday celebration, a memorable birthday bash, or 
+                    a simple yet heartwarming get-together, you'll find all the event specifics neatly organized here.</P>
+                    <p>Not only will you have access to the event schedules, but we've also made it convenient to get detailed 
+                        insights into each occasion. Expect to find event descriptions, themes, important announcements, and any 
+                        necessary preparations. You can also view photos from our past events, reminiscing on the wonderful 
+                        memories we've created together.<img class="img2" src="FAM front.jpg" alt="Image 2" height="">The site's user-friendly design ensures
+             effortless navigation. You'll find a menu bar that offers quick access to different sections, 
+             allowing you to easily explore upcoming events, catch up on past gatherings, and locate essential contact 
+             information or RSVP details. We understand the importance of staying connected as a family, 
+                especially when distances separate us. This platform aims to bridge that gap, making it simpler for 
+                each and every one of us to come together, celebrate, and create lasting memories.</p><p>Feel free to 
+                    bookmark this page or save it as a favorite for easy access. We encourage you to check back regularly for 
+                    updates and new announcements. Your active participation and engagement will make our family events even more 
+            special.<img class="img3" src="FAM Together.jpg" alt="Image 3"> Thank you for being a part of our cherished family traditions. Let's continue to create unforgettable 
+                moments, laughter, and joy together through these gatherings.</p><br>
+           </div><hr>
+           <div class="space"></div>
+           <div class="buttons">
+ <!-- Three centered buttons -->
+ <a href="calender.html">Events Calendar</a>
+ <a href="gallery.html">Gallery</a>
+ <a href="donate.html">Donate</a>
+           </div>
+           <script>
+            // JavaScript function to toggle the navigation menu
+            function toggleMenu() {
+                var nav = document.getElementById('nav');
+                nav.classList.toggle('show');
+            }
+        </script>
+         <div class="space"></div>
+        <footer>
+            <p>&#169 Finessed Webs Website Design &#183 Tel: +27 67 112 2347 &#183 View our Social Media and don&#8217t forget to follow and like.
+            </p>
+            <p>Designed by FinessedWebs</p>
+          </footer>
+    </body>
+</html>

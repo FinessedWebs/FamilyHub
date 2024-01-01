@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            background: #ecf4fb;
+        }
+    
+
+    .img-gallery{
+    width: 10%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auot-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.img-gallery img{
+    width: 100%;
+    cursor: pointer;
+}
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2 );
+}
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+}
+.full-img img{
+    width: 90%;
+    max-width: 500px;
+}
+.full-img span{
+    position: absolute;
+    top:5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+}
+/* Existing CSS styles */
+
+.img-gallery {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+/* Add the following styles to control rows and columns */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex-basis: calc(33.33% - 10px); /* Adjust width as per your layout */
+  margin-bottom: 20px;
+}
+
+.img-gallery img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-gallery img:hover {
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+.space{
+    height: 50px;
+}
+footer{
+
+padding: 0.5em 0;
+height: 130px;
+justify-content: center;
+font-size: 15px;
+text-align: center;
+}
+
+
+    </style>
+    </head>
+    <body>
+
+<div class="full-img" id="fullImgBox">
+    <img src="image/fam (1).jpg"  id="fullImg">
+    
+    <span onclick="closeFullImg()">x</span>
+</div>
+
+<div class="img-gallery">
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (1).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+      <img src="image/fam (4).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+      <img src="image/fam (5).jpg" onclick="openFullImg(this.src)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (6).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+        <img src="image/fam (7).jpg" onclick="openFullImg(this.src)">
+      </div>
+      <div class="column">
+        <img src="image/fam (8).jpg" onclick="openFullImg(this.src)">
+      </div>
+    <!-- Add more images within rows and columns as needed -->
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (9).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+        <img src="image/fam (10).jpg" onclick="openFullImg(this.src)">
+      </div>
+      <div class="column">
+        <img src="image/fam (11).jpg" onclick="openFullImg(this.src)">
+      </div>
+    <!-- Add more images within rows and columns as needed -->
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (12).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+        <img src="image/fam (13).jpg" onclick="openFullImg(this.src)">
+      </div>
+      <div class="column">
+        <img src="image/fam (14).jpg" onclick="openFullImg(this.src)">
+      </div>
+    <!-- Add more images within rows and columns as needed -->
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (15).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+        <img src="image/fam (16).jpg" onclick="openFullImg(this.src)">
+      </div>
+      <div class="column">
+        <img src="image/fam (17).jpg" onclick="openFullImg(this.src)">
+      </div>
+    <!-- Add more images within rows and columns as needed -->
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (18).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+        <img src="image/fam (19).jpg" onclick="openFullImg(this.src)">
+      </div>
+      <div class="column">
+        <img src="image/fam (20).jpg" onclick="openFullImg(this.src)">
+      </div>
+    <!-- Add more images within rows and columns as needed -->
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (21).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+        <img src="image/fam (22).jpg" onclick="openFullImg(this.src)">
+      </div>
+      <div class="column">
+        <img src="image/fam (23).jpg" onclick="openFullImg(this.src)">
+      </div>
+    <!-- Add more images within rows and columns as needed -->
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="image/fam (79).jpg" onclick="openFullImg(this.src)">
+    </div>
+    <div class="column">
+        <img src="image/fam (78).jpg" onclick="openFullImg(this.src)">
+      </div>
+      <div class="column">
+        <img src="image/fam (80).jpg" onclick="openFullImg(this.src)">
+      </div>
+    <!-- Add more images within rows and columns as needed -->
+  </div>
+</div>
+
+
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+    }
+
+    function closeFullImg(){
+        fullImgBox.style.display = "none";
+        
+    }
+</script>
+
+
+
+
+
+
+<div class="space"></div>
+<footer>
+    <p>&#169 Finessed Webs Website Design &#183 Tel: +27 67 112 2347 &#183 View our Social Media and don&#8217t forget to follow and like.
+    </p>
+    <p>Designed by FinessedWebs</p>
+  </footer>
+
+
+
+
+    </body>
+</html>

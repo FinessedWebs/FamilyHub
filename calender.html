@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+            <title>calendar</title>
+        <link rel="stylesheet" href="demo/demo.css">
+        <link rel="stylesheet" href="evo-calendar.min.css">
+        <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<div><div class="hero">
+    <div id="calendar"></div>
+</div>
+<div class="space"></div>
+<div class="form" id="contact">
+    <h2>Get-Together Suggestions</h2> 
+    <h2>Your Details</h2>
+    <form action="https://formspree.io/f/meqwpepv" method="post">
+        <input type="text" name="Name" placeholder="Full Name" required><br>
+        <input type="email" name="Email" placeholder="Email" required><br>
+        <input type="tel" name="Telephone" placeholder="Tel" required><br>
+        <select name="province">
+    <option>Gauteng</option>
+    <option>Western Cape</option>
+    <option>Eastern Cape</option>
+    <option>Northen Cape</option>
+    <option>North West</option>
+    <option>Limpopo</option>
+    <option>Kwazulu-Natal</option>
+    <option>Free State</option>
+    <option>Mpumalanga</option>
+        </select><br>
+        <textarea name="Message" placeholder="Message"></textarea>
+       
+            <br><br>
+      
+        <input class="submit" type="submit" value="Submit">
+    </form>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="evo-calendar.min.js"></script>
+<script>
+$(document).ready(function() 
+{
+$('#calendar').evoCalendar(
+{
+    calendarEvents: 
+    [
+        {
+            id: 'bHay68s', // Event's ID (required)
+            name: "New Year", // Event name (required)
+            date: "January/1/2020", // Event date (required)
+            description:"money day",
+            type: "holiday", // Event type (required)                                  //youtube video: https://youtu.be/eT-yDDnFbyU?si=s5pmCd35uDAfHCt4
+            everyYear: true // Same event every year (optional)
+        },
+        {
+            name: "Vacation Leave",
+            badge: "02/13 - 02/15", // Event badge (optional)
+            date: ["February/13/2020", "February/15/2020"], // Date range
+            description: "Vacation leave for 3 days.", // Event description (optional)
+            type: "event",
+            color: "#63d867" // Event custom color (optional)
+        }
+   ]
+})
+})
+</script></div>
+<div class="space"></div>
+<footer>
+    <p>&#169 Finessed Webs Website Design &#183 Tel: +27 67 112 2347 &#183 View our Social Media and don&#8217t forget to follow and like.
+    </p>
+    <p>Designed by FinessedWebs</p>
+  </footer>
+</body>
+    
+</html>
